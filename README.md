@@ -4,10 +4,10 @@ This is a simple client to [SWAPI](https://swapi.co/) written in [nim](https://n
 
 ## TODO
 
-[x] Use modules
-[ ] Add a --full option for displaying all available fields
-[ ] Caching
-[ ] --field:<fieldname> option
+- [x] Use modules
+- [ ] Add a --full option for displaying all available fields
+- [ ] Caching
+- [ ] --field:<fieldname> option
 
 ## Use
 
