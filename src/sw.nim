@@ -1,22 +1,11 @@
-import httpclient, json, parseopt, random, strutils
+import parseopt, random
 from planet import getPlanet
+from people import getPeople
 
 randomize()
 
 # Const -----
-let randomPeopleMax = 87 # --> https://swapi.co/api/people/
-let baseURL = "https://swapi.co/api/"
-let peoplePath = "people/"
-
 var p = initOptParser()
-
-let client = newHttpClient()
-
-proc getPeople(): string =
-  var id = rand(randomPeopleMax)
-  let res = client.getContent(baseURL & peoplePath & intToStr(id))
-  let j = parseJson(res)
-  j["name"].getStr()
 
 # Parsing cmd
 while true:
