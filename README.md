@@ -16,4 +16,4 @@ For a character:
 
 ## Dev
 
-Use `nim compile -d:ssl --run src/sw.nim` to compile and run.
+Use `nim compile -d:ssl --outdir:./dist --run src/sw.nim` to compile and run.
