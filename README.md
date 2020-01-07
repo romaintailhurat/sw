@@ -7,7 +7,7 @@ This is a simple client to [SWAPI](https://swapi.co/) written in [nim](https://n
 - [x] Use modules
 - [ ] Add a --full option for displaying all available fields
 - [ ] Caching
-- [ ] --field:<fieldname> option
+- [ ] --field:fieldname option
 
 ## Use
 
