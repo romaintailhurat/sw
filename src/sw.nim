@@ -5,10 +5,11 @@ from people import getPeople
 randomize()
 
 var p = initOptParser()
+var commands = ["people", "planet"]
 var fullKeys = false
 var command = ""
 
-# Parsing cmd
+# Parsing command -----
 while true:
     p.next()
     case p.kind
@@ -27,6 +28,9 @@ while true:
         #echo getPeople(full = fullKeys)
         command = p.key
 
+# Do things with what has been parsed
+if command notin commands:
+  echo "The command ", command, " is not supported."
 if command == "people":
   if fullKeys:
     echo getPeople(full = fullKeys)
