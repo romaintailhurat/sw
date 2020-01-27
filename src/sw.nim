@@ -5,7 +5,7 @@ from people import getPeople
 randomize()
 
 var p = initOptParser()
-var commands = ["people", "planet"]
+var commands = ["people", "planet", "help"]
 var fullKeys = false
 var command = ""
 
@@ -31,6 +31,8 @@ while true:
         if p.key == "people":
           #echo getPeople(full = fullKeys)
           command = p.key
+        if p.key == "help":
+          command = "help"
         
 
 # Do things with what has been parsed -----
@@ -39,3 +41,9 @@ if command == "people":
     echo getPeople(full = fullKeys)
   else:
     echo getPeople()
+if command == "help":
+  echo """
+sw - Query SWAPI, the Star Wars API
+commands:
+  planet
+  people"""
