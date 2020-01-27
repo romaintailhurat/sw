@@ -22,15 +22,18 @@ while true:
       else:
         echo "Option and value: ", p.key, ", ", p.val
     of cmdArgument:
-      if p.key == "planet":
-        echo getPlanet()
-      if p.key == "people":
-        #echo getPeople(full = fullKeys)
-        command = p.key
+      if p.key notin commands:
+        echo "The command", command, " is not supported."
+        break
+      else:
+        if p.key == "planet":
+          echo getPlanet()
+        if p.key == "people":
+          #echo getPeople(full = fullKeys)
+          command = p.key
+        
 
-# Do things with what has been parsed
-if command notin commands:
-  echo "The command ", command, " is not supported."
+# Do things with what has been parsed -----
 if command == "people":
   if fullKeys:
     echo getPeople(full = fullKeys)

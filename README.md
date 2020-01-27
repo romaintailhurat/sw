@@ -23,4 +23,8 @@ For a character:
 
 ## Dev
 
+`nim compile -d:ssl --outdir:dist src/sw.nim` will compile the package.
+
+To run it: `./dist/sw <command>`
+
 Use `nim compile -d:ssl --outdir:dist --run src/sw.nim` to compile and run.
